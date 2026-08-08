@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.18.2"><!-- <link rel="preload" as="image" href={src} alt="Hero" /> --><title>Best Things to Buy Right Now — Week of July 30, 2026 Shopping Guide | orcalva</title><link rel="canonical" href="https://www.orcalva.com/blog/2026-07-30-%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%861505/"><meta name="description" content="orcalva is a starter website template for Astro built with TailwindCSS."><meta name="robots" content="index, follow"><meta property="og:title" content="orcalva - Starter Template for Astro"><meta property="og:type" content="website"><meta property="og:image" content="https://www.orcalva.com/opengraph.jpg"><meta property="og:url" content="https://www.orcalva.com/blog/2026-07-30-%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%861505/"><meta property="og:image:url" content="https://www.orcalva.com/opengraph.jpg"><meta property="og:image:alt" content="orcalva Homepage Screenshot"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@orcalva"><meta name="twitter:creator" content="@surjithctly"><link rel="stylesheet" href="/_astro/about.COx95D84.css"></head> <body> <div class="max-w-(--breakpoint-xl) mx-auto px-5">  <header class="flex flex-col lg:flex-row justify-between items-center my-5">  <div class="flex w-full lg:w-auto items-center justify-between"> <a href="/" class="text-lg"><span class="font-bold text-slate-800">Astro</span><span class="text-slate-500">ship</span> </a> <div class="block lg:hidden"> <button id="astronav-menu" aria-label="Toggle Menu">  <svg fill="currentColor" class="w-4 h-4 text-gray-800" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <title>Toggle Menu</title> <path class="astronav-close-icon astronav-toggle hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"></path> <path class="astronav-open-icon astronav-toggle" fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"></path> </svg>  </button> </div> </div> <nav class="astronav-items astronav-toggle hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">  <ul class="flex flex-col lg:flex-row lg:gap-3"> <li> <a href="/blog" class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900"> <span> Blog</span>  </a> </li><li> <a href="/about" class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900"> <span> About</span>  </a> </li><li> <a href="/contact" class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900"> <span> Contact</span>  </a> </li> </ul> <div class="lg:hidden flex items-center mt-3 gap-4"> <a href="#" class="rounded-sm text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 w-full px-4 py-2 bg-gray-100 hover:bg-gray-200   border-2 border-transparent">Log in </a> <a href="#" class="rounded-sm text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 w-full px-4 py-2 bg-black text-white hover:bg-gray-800  border-2 border-transparent">Sign up </a> </div>  </nav>  <script>(function(){const closeOnClick = false;
+
+["DOMContentLoaded", "astro:after-swap"].forEach((event) => {
+  document.addEventListener(event, addListeners);
+});
+
+// Function to clone and replace elements
+function cloneAndReplace(element) {
+  const clone = element.cloneNode(true);
+  element.parentNode.replaceChild(clone, element);
+}
+
+function addListeners() {
+  // Clean up existing listeners
+  const oldMenuButton = document.getElementById("astronav-menu");
+  if (oldMenuButton) {
+    cloneAndReplace(oldMenuButton);
+  }
+
+  const oldDropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  oldDropdownMenus.forEach((menu) => {
+    cloneAndReplace(menu);
+  });
+
+  // Mobile nav toggle
+  const menuButton = document.getElementById("astronav-menu");
+  menuButton && menuButton.addEventListener("click", toggleMobileNav);
+
+  // Dropdown menus
+  const dropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  dropdownMenus.forEach((menu) => {
+    const button = menu.querySelector("button");
+    button &&
+      button.addEventListener("click", (event) =>
+        toggleDropdownMenu(event, menu, dropdownMenus)
+      );
+
+    // Handle Submenu Dropdowns
+    const dropDownSubmenus = menu.querySelectorAll(
+      ".astronav-dropdown-submenu"
+    );
+
+    dropDownSubmenus.forEach((submenu) => {
+      const submenuButton = submenu.querySelector("button");
+      submenuButton &&
+        submenuButton.addEventListener("click", (event) => {
+          event.stopImmediatePropagation();
+          toggleSubmenuDropdown(event, submenu);
+        });
+    });
+  });
+
+  // Clicking away from dropdown will remove the dropdown class
+  document.addEventListener("click", closeAllDropdowns);
+
+  if (closeOnClick) {
+    handleCloseOnClick();
+  }
+}
+
+function toggleMobileNav() {
+  [...document.querySelectorAll(".astronav-toggle")].forEach((el) => {
+    el.classList.toggle("hidden");
+  });
+}
+
+function toggleDropdownMenu(event, menu, dropdownMenus) {
+  toggleMenu(menu);
+
+  // Close one dropdown when selecting another
+  Array.from(dropdownMenus)
+    .filter((el) => el !== menu && !menu.contains(el))
+    .forEach(closeMenu);
+
+  event.stopPropagation();
+}
+
+function toggleSubmenuDropdown(event, submenu) {
+  event.stopPropagation();
+  toggleMenu(submenu);
+
+  // Close sibling submenus at the same nesting level
+  const siblingSubmenus = submenu
+    .closest(".astronav-dropdown")
+    .querySelectorAll(".astronav-dropdown-submenu");
+  Array.from(siblingSubmenus)
+    .filter((el) => el !== submenu && !submenu.contains(el))
+    .forEach(closeMenu);
+}
+
+function closeAllDropdowns(event) {
+  const dropdownMenus = document.querySelectorAll(".dropdown-toggle");
+  const dropdownParent = document.querySelectorAll(
+    ".astronav-dropdown, .astronav-dropdown-submenu"
+  );
+  const isButtonInsideDropdown = [
+    ...document.querySelectorAll(
+      `.astronav-dropdown button, .astronav-dropdown label, .astronav-dropdown input,
+	  .astronav-dropdown-submenu button, .astronav-dropdown-submenu label, .astronav-dropdown-submenu input,
+	  #astronav-menu`
+    ),
+  ].some((button) => button.contains(event.target));
+  if (!isButtonInsideDropdown) {
+    dropdownMenus.forEach((d) => {
+      // console.log("I ran", d);
+      // if (!d.contains(event.target)) {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.classList.add("hidden");
+      // }
+    });
+    dropdownParent.forEach((d) => {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.setAttribute("aria-expanded", "false");
+    });
+  }
+}
+
+function toggleMenu(menu) {
+  menu.classList.toggle("open");
+  const expanded = menu.getAttribute("aria-expanded") === "true";
+  menu.setAttribute("aria-expanded", expanded ? "false" : "true");
+  menu.hasAttribute("open")
+    ? menu.removeAttribute("open")
+    : menu.setAttribute("open", "");
+
+  const dropdownToggle = menu.querySelector(".dropdown-toggle");
+  const dropdownExpanded = dropdownToggle.getAttribute("aria-expanded");
+  dropdownToggle.classList.toggle("hidden");
+  dropdownToggle.setAttribute(
+    "aria-expanded",
+    dropdownExpanded === "true" ? "false" : "true"
+  );
+}
+
+function closeMenu(menu) {
+  // console.log("closing", menu);
+  menu.classList.remove("open");
+  menu.removeAttribute("open");
+  menu.setAttribute("aria-expanded", "false");
+  const dropdownToggles = menu.querySelectorAll(".dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    toggle.classList.add("hidden");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+}
+
+function handleCloseOnClick() {
+  const navMenuItems = document.querySelector(".astronav-items");
+  const navToggle = document.getElementById("astronav-menu");
+  const navLink = navMenuItems && navMenuItems.querySelectorAll("a");
+
+  const MenuIcons = navToggle.querySelectorAll(".astronav-toggle");
+
+  navLink &&
+    navLink.forEach((item) => {
+      item.addEventListener("click", () => {
+        navMenuItems?.classList.add("hidden");
+        MenuIcons.forEach((el) => {
+          el.classList.toggle("hidden");
+        });
+      });
+    });
+}
+})();</script> <div> <div class="hidden lg:flex items-center gap-4"> <a href="#">Log in</a> <a href="#" class="rounded-sm text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-4 py-2 bg-black text-white hover:bg-gray-800  border-2 border-transparent">Sign up </a> </div> </div> </header>  </div>  <div class="max-w-(--breakpoint-xl) mx-auto px-5">  <div class="mx-auto max-w-3xl mt-14"> <span class="text-blue-400 uppercase tracking-wider text-sm font-medium"> Shopping Guide </span> <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight"> Best Things to Buy Right Now — Week of July 30, 2026 Shopping Guide </h1> <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap"> <span class="text-gray-400"> orcalva </span> <span class="text-gray-400">•</span> <time class="text-gray-400" datetime="2022-11-09T16:39:00.000Z"> Wed Nov 09 2022 </time> <span class="text-gray-400 hidden md:block">•</span> <div class="w-full md:w-auto flex flex-wrap gap-3"> <span class="text-sm text-gray-500">#shopping guide</span><span class="text-sm text-gray-500">#best buys</span><span class="text-sm text-gray-500">#k-beauty</span><span class="text-sm text-gray-500">#supplements</span><span class="text-sm text-gray-500">#cooling</span><span class="text-sm text-gray-500">#sleep</span> </div> </div> </div> <div class="mx-auto prose prose-lg mt-6 max-w-3xl"> <h1 id="best-things-to-buy-right-now--july-30-2026">Best Things to Buy Right Now — July 30, 2026</h1>
+<blockquote>
+<p><strong>Quick take:</strong> K-beauty, smart supplements, and cooling sleep gear are trending hard this week — perfect for refreshing your routine and stocking up on everyday staples.</p>
+</blockquote>
+<h2 id="whats-hot-this-week">What’s Hot This Week</h2>
+<ul>
+<li>K-beauty powerhouses like medicube are topping bestseller charts on both Amazon and TikTok Shop.</li>
+<li>Supplements — especially B12 gummies and magnesium — are the fastest-growing wellness buy this summer.</li>
+<li>Europe’s heatwave is driving demand for cooling pillows, blankets, and temperature-regulating bedding.</li>
+<li>Oral care is having a moment, with hydroxyapatite toothpaste gaining ground as a fluoride-free favorite.</li>
+<li>Replenishment subscriptions (prebiotic soda, meal shakes, vitamins) make everyday essentials effortless.</li>
+</ul>
+<h2 id="top-marketplace-picks-amazon--tiktok-shop--temu">Top Marketplace Picks (Amazon · TikTok Shop · Temu)</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>#</th><th>Product</th><th>Why you’ll love it</th><th>Where to buy</th></tr></thead><tbody><tr><td>1</td><td>medicube PDRN Pink Collagen Eye Mask</td><td>The #1 beauty product in the US on TikTok — a cult-favorite PDRN eye mask that visibly de-puffs and brightens.</td><td><a href="https://www.amazon.com/s?k=medicube+PDRN+Collagen+Eye+Mask">Shop now</a></td></tr><tr><td>2</td><td>Hydroxyapatite Toothpaste (fluoride-free)</td><td>A gentle, enamel-friendly alternative that’s trending fast in oral care.</td><td><a href="https://www.amazon.com/s?k=hydroxyapatite+toothpaste">Shop now</a></td></tr><tr><td>3</td><td>Native Coconut &#x26; Vanilla Shampoo / Conditioner</td><td>The season’s #1 haircare pick — a coconut-vanilla duo that softens hair and smells amazing.</td><td><a href="https://www.amazon.com/s?k=Native+Coconut+Vanilla+Shampoo">Shop now</a></td></tr><tr><td>4</td><td>Shark FlexStyle Air Multi-Styler</td><td>A salon-grade multi-styler that dries and curls in one — a TikTok-famous routine upgrade.</td><td><a href="https://www.amazon.com/s?k=Shark+FlexStyle+Air+Multi+Styler">Shop now</a></td></tr><tr><td>5</td><td>Minoxidil for Men</td><td>The top-searched hair-loss solution for men — a simple, proven way to support regrowth.</td><td><a href="https://www.amazon.com/s?k=minoxidil+for+men">Shop now</a></td></tr><tr><td>6</td><td>Toplux Magnesium Complex 8-in-1</td><td>A top-selling blend for better sleep, calm, and recovery — the wellness buy of the moment.</td><td><a href="https://www.tiktok.com/search?q=Toplux+Magnesium+Complex+8+in+1">Shop now</a></td></tr><tr><td>7</td><td>medicube PDRN Pink Collagen Eye Mask</td><td>The same chart-topping eye mask, easy to find and shop directly on TikTok Shop.</td><td><a href="https://www.tiktok.com/search?q=medicube+PDRN+collagen+eye+mask">Shop now</a></td></tr><tr><td>8</td><td>B12 Gummies</td><td>One of the fastest-rising wellness trends — tasty gummies for everyday energy and focus.</td><td><a href="https://www.tiktok.com/search?q=B12+gummies">Shop now</a></td></tr><tr><td>9</td><td>Cooling Pillow &#x26; Blanket (Sleep Cooling)</td><td>Beat the heatwave with cooling pillows and blankets designed for hot sleepers.</td><td><a href="https://www.tiktok.com/search?q=cooling+pillow+blanket">Shop now</a></td></tr><tr><td>10</td><td>Outdoor Cooling &#x26; Star Projector Lights</td><td>Summer must-haves: cooling towels plus star-projector lights for backyard vibes.</td><td><a href="https://www.walmart.com/search?q=cooling+towels+star+projector">Shop now</a></td></tr></tbody></table>
+<h2 id="best-direct-to-consumer--brand-picks">Best Direct-to-Consumer &#x26; Brand Picks</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>#</th><th>Brand / Product</th><th>Why you’ll love it</th><th>Where to buy</th></tr></thead><tbody><tr><td>1</td><td>Huel — Meal Shakes (subscription)</td><td>Complete nutrition shakes on autopilot — a convenient daily meal replacement.</td><td><a href="https://uk.huel.com/">Shop now</a></td></tr><tr><td>2</td><td>Olipop — Prebiotic Soda (subscription)</td><td>Tastes like the real thing while supporting gut health.</td><td><a href="https://drinkolipop.com/">Shop now</a></td></tr><tr><td>3</td><td>Whoop — Fitness Wearable + Membership</td><td>A band plus membership that turns health data into actionable habits.</td><td><a href="https://www.whoop.com/">Shop now</a></td></tr><tr><td>4</td><td>Bite — Zero-Waste Toothpaste Bits</td><td>Refillable toothpaste bits delivered as refills — clean teeth, less plastic.</td><td><a href="https://www.bite.toothpaste.com/">Shop now</a></td></tr><tr><td>5</td><td>Wild — Refillable Deodorant</td><td>Eco-friendly, refillable natural deodorant that’s kind to skin.</td><td><a href="https://wearewild.com/">Shop now</a></td></tr><tr><td>6</td><td>Magic Spoon — High-Protein Cereal</td><td>Low-carb cereal that tastes like the childhood favorite.</td><td><a href="https://magicspoon.com/">Shop now</a></td></tr><tr><td>7</td><td>Blueland — Cleaning Tablet Refills</td><td>Waterless cleaning tablets you dissolve at home — refill, not rebuy.</td><td><a href="https://blueland.com/">Shop now</a></td></tr><tr><td>8</td><td>Micro Ingredients — Collagen &#x26; Supplements</td><td>Bulk collagen peptides and supplements from a top-rated wellness brand.</td><td><a href="https://www.microingredients.com/">Shop now</a></td></tr><tr><td>9</td><td>MaryRuth’s — Liquid Vitamins</td><td>Liquid wellness drops with a loyal subscription following.</td><td><a href="https://www.maryruthorganics.com/">Shop now</a></td></tr><tr><td>10</td><td>Curology — Custom Skincare</td><td>Personalized prescription skincare, delivered on a membership.</td><td><a href="https://www.curology.com/">Shop now</a></td></tr></tbody></table>
+<h2 id="buying-tips">Buying Tips</h2>
+<ul>
+<li>Stock up on seasonal and holiday items early for the best selection.</li>
+<li>Look for clean-label, clinically backed supplements (magnesium, collagen, B12) for everyday wellness.</li>
+<li>Compare across Amazon, TikTok Shop, and Walmart to catch the best price on the same item.</li>
+</ul>
+<blockquote>
+<p><strong>Bottom line:</strong> K-beauty, smart supplements, and cooling sleep gear are the standout categories to grab this week.</p>
+</blockquote> </div> <div class="text-center mt-8"> <a href="/blog" class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition">← Back to Blog</a> </div>  </div>  <footer class="my-20"> <p class="text-center text-sm text-slate-500">
+Copyright © 2026 orcalva. All rights reserved.
+</p> <!--
+    Can we ask you a favor 🙏
+    Please keep this backlink on your website if possible.
+    or Purchase a commercial license from https://orcalva.com
+  --> <p class="text-center text-xs text-slate-500 mt-1">
+Made by <a href="https://orcalva.com" target="_blank" rel="noopener" class="hover:underline">
+orcalva
+</a> </p> </footer>  </body> </html>

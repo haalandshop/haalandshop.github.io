@@ -1,0 +1,452 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.18.2"><!-- <link rel="preload" as="image" href={src} alt="Hero" /> --><title>Best Things to Buy Right Now — Week of June 12, 2026 Shopping Guide | orcalva</title><link rel="canonical" href="https://www.orcalva.com/blog/2026-06-12-%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%861505/"><meta name="description" content="orcalva is a starter website template for Astro built with TailwindCSS."><meta name="robots" content="index, follow"><meta property="og:title" content="orcalva - Starter Template for Astro"><meta property="og:type" content="website"><meta property="og:image" content="https://www.orcalva.com/opengraph.jpg"><meta property="og:url" content="https://www.orcalva.com/blog/2026-06-12-%E8%B7%A8%E5%A2%83%E7%94%B5%E5%95%861505/"><meta property="og:image:url" content="https://www.orcalva.com/opengraph.jpg"><meta property="og:image:alt" content="orcalva Homepage Screenshot"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@orcalva"><meta name="twitter:creator" content="@surjithctly"><link rel="stylesheet" href="/_astro/about.COx95D84.css"></head> <body> <div class="max-w-(--breakpoint-xl) mx-auto px-5">  <header class="flex flex-col lg:flex-row justify-between items-center my-5">  <div class="flex w-full lg:w-auto items-center justify-between"> <a href="/" class="text-lg"><span class="font-bold text-slate-800">Astro</span><span class="text-slate-500">ship</span> </a> <div class="block lg:hidden"> <button id="astronav-menu" aria-label="Toggle Menu">  <svg fill="currentColor" class="w-4 h-4 text-gray-800" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"> <title>Toggle Menu</title> <path class="astronav-close-icon astronav-toggle hidden" fill-rule="evenodd" clip-rule="evenodd" d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"></path> <path class="astronav-open-icon astronav-toggle" fill-rule="evenodd" d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"></path> </svg>  </button> </div> </div> <nav class="astronav-items astronav-toggle hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">  <ul class="flex flex-col lg:flex-row lg:gap-3"> <li> <a href="/blog" class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900"> <span> Blog</span>  </a> </li><li> <a href="/about" class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900"> <span> About</span>  </a> </li><li> <a href="/contact" class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900"> <span> Contact</span>  </a> </li> </ul> <div class="lg:hidden flex items-center mt-3 gap-4"> <a href="#" class="rounded-sm text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 w-full px-4 py-2 bg-gray-100 hover:bg-gray-200   border-2 border-transparent">Log in </a> <a href="#" class="rounded-sm text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 w-full px-4 py-2 bg-black text-white hover:bg-gray-800  border-2 border-transparent">Sign up </a> </div>  </nav>  <script>(function(){const closeOnClick = false;
+
+["DOMContentLoaded", "astro:after-swap"].forEach((event) => {
+  document.addEventListener(event, addListeners);
+});
+
+// Function to clone and replace elements
+function cloneAndReplace(element) {
+  const clone = element.cloneNode(true);
+  element.parentNode.replaceChild(clone, element);
+}
+
+function addListeners() {
+  // Clean up existing listeners
+  const oldMenuButton = document.getElementById("astronav-menu");
+  if (oldMenuButton) {
+    cloneAndReplace(oldMenuButton);
+  }
+
+  const oldDropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  oldDropdownMenus.forEach((menu) => {
+    cloneAndReplace(menu);
+  });
+
+  // Mobile nav toggle
+  const menuButton = document.getElementById("astronav-menu");
+  menuButton && menuButton.addEventListener("click", toggleMobileNav);
+
+  // Dropdown menus
+  const dropdownMenus = document.querySelectorAll(".astronav-dropdown");
+  dropdownMenus.forEach((menu) => {
+    const button = menu.querySelector("button");
+    button &&
+      button.addEventListener("click", (event) =>
+        toggleDropdownMenu(event, menu, dropdownMenus)
+      );
+
+    // Handle Submenu Dropdowns
+    const dropDownSubmenus = menu.querySelectorAll(
+      ".astronav-dropdown-submenu"
+    );
+
+    dropDownSubmenus.forEach((submenu) => {
+      const submenuButton = submenu.querySelector("button");
+      submenuButton &&
+        submenuButton.addEventListener("click", (event) => {
+          event.stopImmediatePropagation();
+          toggleSubmenuDropdown(event, submenu);
+        });
+    });
+  });
+
+  // Clicking away from dropdown will remove the dropdown class
+  document.addEventListener("click", closeAllDropdowns);
+
+  if (closeOnClick) {
+    handleCloseOnClick();
+  }
+}
+
+function toggleMobileNav() {
+  [...document.querySelectorAll(".astronav-toggle")].forEach((el) => {
+    el.classList.toggle("hidden");
+  });
+}
+
+function toggleDropdownMenu(event, menu, dropdownMenus) {
+  toggleMenu(menu);
+
+  // Close one dropdown when selecting another
+  Array.from(dropdownMenus)
+    .filter((el) => el !== menu && !menu.contains(el))
+    .forEach(closeMenu);
+
+  event.stopPropagation();
+}
+
+function toggleSubmenuDropdown(event, submenu) {
+  event.stopPropagation();
+  toggleMenu(submenu);
+
+  // Close sibling submenus at the same nesting level
+  const siblingSubmenus = submenu
+    .closest(".astronav-dropdown")
+    .querySelectorAll(".astronav-dropdown-submenu");
+  Array.from(siblingSubmenus)
+    .filter((el) => el !== submenu && !submenu.contains(el))
+    .forEach(closeMenu);
+}
+
+function closeAllDropdowns(event) {
+  const dropdownMenus = document.querySelectorAll(".dropdown-toggle");
+  const dropdownParent = document.querySelectorAll(
+    ".astronav-dropdown, .astronav-dropdown-submenu"
+  );
+  const isButtonInsideDropdown = [
+    ...document.querySelectorAll(
+      `.astronav-dropdown button, .astronav-dropdown label, .astronav-dropdown input,
+	  .astronav-dropdown-submenu button, .astronav-dropdown-submenu label, .astronav-dropdown-submenu input,
+	  #astronav-menu`
+    ),
+  ].some((button) => button.contains(event.target));
+  if (!isButtonInsideDropdown) {
+    dropdownMenus.forEach((d) => {
+      // console.log("I ran", d);
+      // if (!d.contains(event.target)) {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.classList.add("hidden");
+      // }
+    });
+    dropdownParent.forEach((d) => {
+      d.classList.remove("open");
+      d.removeAttribute("open");
+      d.setAttribute("aria-expanded", "false");
+    });
+  }
+}
+
+function toggleMenu(menu) {
+  menu.classList.toggle("open");
+  const expanded = menu.getAttribute("aria-expanded") === "true";
+  menu.setAttribute("aria-expanded", expanded ? "false" : "true");
+  menu.hasAttribute("open")
+    ? menu.removeAttribute("open")
+    : menu.setAttribute("open", "");
+
+  const dropdownToggle = menu.querySelector(".dropdown-toggle");
+  const dropdownExpanded = dropdownToggle.getAttribute("aria-expanded");
+  dropdownToggle.classList.toggle("hidden");
+  dropdownToggle.setAttribute(
+    "aria-expanded",
+    dropdownExpanded === "true" ? "false" : "true"
+  );
+}
+
+function closeMenu(menu) {
+  // console.log("closing", menu);
+  menu.classList.remove("open");
+  menu.removeAttribute("open");
+  menu.setAttribute("aria-expanded", "false");
+  const dropdownToggles = menu.querySelectorAll(".dropdown-toggle");
+  dropdownToggles.forEach((toggle) => {
+    toggle.classList.add("hidden");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+}
+
+function handleCloseOnClick() {
+  const navMenuItems = document.querySelector(".astronav-items");
+  const navToggle = document.getElementById("astronav-menu");
+  const navLink = navMenuItems && navMenuItems.querySelectorAll("a");
+
+  const MenuIcons = navToggle.querySelectorAll(".astronav-toggle");
+
+  navLink &&
+    navLink.forEach((item) => {
+      item.addEventListener("click", () => {
+        navMenuItems?.classList.add("hidden");
+        MenuIcons.forEach((el) => {
+          el.classList.toggle("hidden");
+        });
+      });
+    });
+}
+})();</script> <div> <div class="hidden lg:flex items-center gap-4"> <a href="#">Log in</a> <a href="#" class="rounded-sm text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200 px-4 py-2 bg-black text-white hover:bg-gray-800  border-2 border-transparent">Sign up </a> </div> </div> </header>  </div>  <div class="max-w-(--breakpoint-xl) mx-auto px-5">  <div class="mx-auto max-w-3xl mt-14"> <span class="text-blue-400 uppercase tracking-wider text-sm font-medium"> Shopping Guide </span> <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight"> Best Things to Buy Right Now — Week of June 12, 2026 Shopping Guide </h1> <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap"> <span class="text-gray-400"> orcalva </span> <span class="text-gray-400">•</span> <time class="text-gray-400" datetime="2022-11-09T16:39:00.000Z"> Wed Nov 09 2022 </time> <span class="text-gray-400 hidden md:block">•</span> <div class="w-full md:w-auto flex flex-wrap gap-3"> <span class="text-sm text-gray-500">#shopping guide</span><span class="text-sm text-gray-500">#best buys</span><span class="text-sm text-gray-500">#inventory positioning</span><span class="text-sm text-gray-500">#stock depth</span><span class="text-sm text-gray-500">#prime day</span><span class="text-sm text-gray-500">#marketplace picks</span><span class="text-sm text-gray-500">#dtc brands</span><span class="text-sm text-gray-500">#summer deals</span><span class="text-sm text-gray-500">#restock risk</span><span class="text-sm text-gray-500">#price timing</span> </div> </div> </div> <div class="mx-auto prose prose-lg mt-6 max-w-3xl"> <h1 id="best-things-to-buy-right-now--june-12-2026">Best Things to Buy Right Now — June 12, 2026</h1>
+<blockquote>
+<p><strong>Quick take:</strong> Here is the thing almost nobody says out loud about the sale that opens in eleven days: <strong>it has already happened.</strong> Not the discounts, not the countdown banners, not the checkout — those come on June 23. But the part that actually determines what you pay was decided months ago and is now finished, frozen, and physically complete. Every single unit that will be marked down in that event is already off a ship, already through customs, already scanned into a fulfilment centre or a brand’s own warehouse. The inbound receiving windows for the event closed weeks ago. The ocean freight was booked in February and March, at February and March rates, against a demand forecast someone wrote before they knew anything about how this summer would actually go. The cost basis is locked. The quantity is locked. Nothing new is coming. And that changes what a discount even means. A markdown is not a gift and it is not a competitive response — it is <strong>an inventory position being resolved</strong>. A seller who over-ordered has a carrying-cost problem that gets worse every week, and they will cut hard and keep cutting, because the alternative is paying long-term storage on units that missed their season. A seller who under-ordered has no such problem, and will post a polite five percent that exists only so their listing gets the badge. Those two situations look identical in a promotional email and are worth completely different amounts of money to you. The good news is that you can tell them apart from the outside, today, before anything is discounted, because inventory depth leaks into a product page in ways that are hard to hide: variant availability, quantity caps, how many sellers are on one listing, how long the dispatch estimate is, whether the brand’s own site is quoting a lead time. There is a second consequence, and it is the urgent one. <strong>No restocks.</strong> If something runs out during the event, it does not come back the next morning — it comes back when the next inbound cycle clears, which is weeks. So the calculus on a thin-stock item is not “wait for a bigger discount,” it is “take the smaller discount that exists while the unit exists.” And there is a third consequence that cuts the other way entirely: independent brand sites are not bound by any of this. They hold their own stock, they control their own receiving, and they can restock and re-discount mid-event. On marketplaces, buy early to secure the unit. On direct sites, you can afford to be patient. Today is the Friday to sort your list into those two piles.</p>
+</blockquote>
+<h2 id="whats-hot-this-week">What’s Hot This Week</h2>
+<p>The next eleven days will be described everywhere as a countdown. That framing is wrong in a specific and expensive way, because it implies that something is still being decided. It is not. What is happening between now and June 23 is not decision-making, it is disclosure — the slow reveal of choices that were made in a spreadsheet in early spring. Once you see it that way, the week has a very different shape.</p>
+<h3 id="the-freight-is-already-off-the-boat">The freight is already off the boat</h3>
+<p>Start with the physical reality, because everything else follows from it.</p>
+<p>A product that will be discounted in a major June marketplace event went through a sequence that began long before June. Somebody forecast demand in January or February. They placed a factory order against that forecast. Production ran for four to eight weeks. The goods were consolidated and booked onto a vessel. Ocean transit ran three to six weeks depending on lane and routing. Then customs clearance, then drayage, then a delivery appointment at a fulfilment centre, then receiving and check-in — which is itself not instant during a pre-peak surge, because everyone else is trying to receive at the same time.</p>
+<p>Add that up honestly and you get a lead time measured in months, not weeks. Which means the inventory competing for your money on June 23 was committed to somewhere around the end of the first quarter. The receiving deadlines to be event-eligible closed well before now. As of today, June 12, the warehouse map is finished. There is no scenario in which a seller looks at demand next week and gets more units into position in time.</p>
+<p>This matters because it removes an assumption most shoppers carry without examining it: the assumption that a big sale is a competitive event where sellers undercut each other in real time. It is not. It is a <strong>liquidation window against fixed positions</strong>. Each seller arrives with a number of units they cannot change and a cost per unit they cannot change, and the only remaining variable is how aggressively they price to clear.</p>
+<p>So the question to ask about any product is not “will this be on sale?” It is “does whoever owns this have too much of it?” Because that is the entire mechanism. Too much inventory produces a real discount, because carrying cost compounds and storage fees escalate and a unit that misses its season is worth dramatically less in September than in June. Correct or short inventory produces a cosmetic discount, because there is no pressure and no reason.</p>
+<p>There is a corollary worth internalising. Because the cost basis was locked in spring, <strong>discounts this month are insulated from anything happening in freight markets right now.</strong> If rates on a lane moved last week, that has zero bearing on the price of something already sitting in a warehouse in Ohio or Rotterdam. It will show up in September pricing. It has nothing to do with June. Any explanation of a June discount that reaches for current shipping conditions is reaching for the wrong quarter.</p>
+<h3 id="how-to-read-stock-depth-from-a-listing">How to read stock depth from a listing</h3>
+<p>If deal quality is a function of inventory depth, and inventory depth is fixed and knowable, then the useful skill this week is reading depth off a page. It is more legible than people assume. Here is what actually carries signal.</p>
+<p><strong>Variant completeness.</strong> Open a product that comes in multiple sizes, colours, or capacities. If every single variant is available, that is a deep, broad buy — somebody committed to full coverage across the range. Full coverage is expensive and it is the behaviour of a seller who expected volume. Expected volume that has not yet materialised is exactly the condition that produces a real markdown. Conversely, if half the variants are greyed out on June 12, the position is already partly consumed and the remainder will not be given away.</p>
+<p><strong>Quantity caps.</strong> A per-customer purchase limit on a non-restricted product is a tell. Limits exist to ration scarce stock. Nobody rations a warehouse full of units. A limit appearing before an event is a fairly direct statement that the seller does not expect to have enough.</p>
+<p><strong>Seller count on a shared listing.</strong> On marketplaces where multiple sellers can list against the same catalogue entry, a long offer list means the channel is stuffed. Several parties independently bought into the same product, all of them now hold units, and they will compete each other down through the event because none of them can afford to be the one holding stock in July. That is a good position for a buyer and a miserable one for the sellers.</p>
+<p><strong>Dispatch and handling estimates.</strong> A listing quoting same-day or next-day handling is being served from a nearby node with real depth. A listing that has quietly extended to a three-to-five-day handling window is being fulfilled from somewhere thinner, or from a merchant’s own shelf, and that is a warning about mid-event availability.</p>
+<p><strong>Lead times on brand sites.</strong> On an independent site, a product page that says “ships in 1-2 business days” is a different inventory reality from one that says “ships by July 8.” The second one is telling you the brand is between production runs. You can still order it. Just do not expect it to participate in any June promotion, because promoting something you cannot ship is how a brand generates refund requests.</p>
+<p><strong>Bundle behaviour.</strong> When a seller starts bundling a product with an accessory rather than cutting its price, that is usually a margin-protection move on an item they are comfortable with. When they start cutting the headline price outright, they want units gone. Bundles are a soft signal. Price cuts are a hard one.</p>
+<p>None of these individually is conclusive. Two or three of them pointing the same way is about as good a read as a shopper can get without access to a seller dashboard, and it is available right now, eleven days before anyone is obligated to tell you anything.</p>
+<h3 id="the-independent-sites-are-playing-a-different-game">The independent sites are playing a different game</h3>
+<p>Everything above describes marketplace mechanics. Direct-to-consumer brands operate under materially different constraints, and the difference is large enough that it should change your behaviour depending on where you are shopping.</p>
+<p>An independent brand holds its own inventory in its own warehouse, or with a third-party logistics partner it contracts directly. There is no external receiving deadline. There is no event eligibility cutoff imposed by a platform. If a product sells faster than expected during a promotion, the brand can pull forward its next production run, air-freight a portion of it, or simply extend the promotion on the items that are still deep while quietly ending it on the ones that are not. They have granular control that a marketplace seller has surrendered.</p>
+<p>The practical consequence is a reversal of timing advice. On a marketplace, the risk you are managing is <strong>stock-out risk</strong>, and it is asymmetric: if you wait and the unit is gone, you have lost the whole purchase, not just a few percent. So on marketplaces, when the discount is decent and the depth signals are thin, take it. On a direct site, the risk you are managing is mostly <strong>price risk</strong>, which is bounded and often recoverable — many brands honour a price adjustment within a short window after purchase, and most run more than one promotion per quarter. Waiting on a direct site costs you less when you are wrong.</p>
+<p>There is a second difference that gets overlooked. Independent brands are not competing for a slot in a platform’s promotional calendar, so they are not forced to concentrate their discounting into the same four days as everyone else. Plenty of them deliberately promote <em>around</em> the big marketplace event — a week before, or the week after — precisely because paid acquisition is cheaper when the whole industry is not bidding simultaneously. Which means the direct-site calendar this month has real opportunities on either side of June 23, and the days immediately before an event are often better on brand sites than during it.</p>
+<h3 id="the-quiet-policy-date-nobody-has-circled">The quiet policy date nobody has circled</h3>
+<p>One item on the June calendar has nothing to do with shopping and may end up mattering more than any of the promotional dates: a scheduled review of restricted-entity designations later this month. It is an administrative matter between governments and it will not produce a headline that mentions consumer prices. But designations of this kind sit upstream of component sourcing, and component sourcing sits upstream of everything with a chip in it.</p>
+<p>The mechanism is slow and indirect, which is precisely why it is worth flagging now rather than after. A designation does not change a shelf price this week. It changes what a manufacturer can source three months from now, which changes their bill of materials for the following production run, which changes the landed cost of the units arriving in the autumn. Nothing you buy in June is affected. A good deal of what you might buy in October could be.</p>
+<p>The practical reading is narrow but real. If you have been deferring a purchase in a category that is component-heavy — networking gear, storage, anything with meaningful semiconductor content — and your plan was to wait until late in the year, that plan carries slightly more cost risk than it did a month ago. It is not a reason to panic-buy. It is a reason to stop treating “later” as automatically cheaper in those specific categories, which is the default assumption in consumer electronics and is not always correct.</p>
+<p>Alongside that, the continued build-out of European fulfilment capacity by the large Asian logistics operators is quietly changing delivery expectations for cross-border orders into the EU. More goods are being pre-positioned inside the bloc rather than shipped individually from origin. For a shopper this shows up as shorter and more predictable delivery windows on items that used to take three weeks, and as fewer customs surprises, because a pre-positioned unit clears as part of a bulk shipment rather than as an individual parcel. It is a slow improvement rather than a dramatic one, but it makes ordering from cross-border sellers into Europe meaningfully less of a gamble than it was even a year ago.</p>
+<h2 id="top-marketplace-picks">Top Marketplace Picks</h2>
+<p>These ten are chosen on the logic above: categories where the spring inventory build looks broad, where depth signals point toward genuine clearance pressure rather than cosmetic markdowns, or where thin stock argues for buying now rather than waiting. Each is on a different platform, and each sits in a different category.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>#</th><th>Product</th><th>Category</th><th>Why it makes sense now</th><th>Where to buy</th></tr></thead><tbody><tr><td>1</td><td>Minisforum compact desktop</td><td>Mini PC</td><td>Broad variant coverage across RAM and storage tiers is the classic over-committed spring buy. Mini PCs also sit in a category with no tournament tie-in, so nothing is propping up demand. Deep discounting is likely and the risk of missing out is low.</td><td><a href="https://www.aliexpress.com/w/wholesale-minisforum.html">AliExpress</a></td></tr><tr><td>2</td><td>Fiio portable DAC and amplifier</td><td>Portable audio</td><td>Personal audio hardware refreshes on a fast cadence, and outgoing models get cleared aggressively before autumn launches. Check whether the model you want is the current generation or the one being replaced — the older one is the better buy this month.</td><td><a href="https://www.amazon.com/s?k=fiio+portable+dac+amp">Amazon</a></td></tr><tr><td>3</td><td>Wera screwdriver and bit set</td><td>Hand tools</td><td>Hand tools are the definition of a quiet aisle right now. Nobody is advertising them, demand is steady rather than seasonal, and multi-seller listings on this platform mean several parties are holding the same stock.</td><td><a href="https://www.ebay.com/sch/i.html?_nkw=wera+screwdriver+set">eBay</a></td></tr><tr><td>4</td><td>Petlibro water fountain</td><td>Pet care</td><td>Summer pet hydration products were built deep for the season and the season is now half over. The window where a seller still believes they can clear at full price is closing, which is exactly when the real cuts start.</td><td><a href="https://www.walmart.com/search?q=petlibro+water+fountain">Walmart</a></td></tr><tr><td>5</td><td>Sabrent NVMe solid-state drive</td><td>Storage</td><td>Storage is the most component-exposed category on this list, which makes it the one where waiting until Q4 carries the most cost risk. Capacity per dollar is good right now and the reasons to defer are weaker than they look.</td><td><a href="https://www.newegg.com/p/pl?d=sabrent+nvme">Newegg</a></td></tr><tr><td>6</td><td>Coway air purifier</td><td>Air quality</td><td>Wildfire and pollen season drives this category in bursts, and warehouse-club channels buy it in very large single commitments. A large single commitment that has not moved is the most reliable source of a deep markdown there is.</td><td><a href="https://www.costco.com/CatalogSearch?keyword=coway%20air%20purifier">Costco</a></td></tr><tr><td>7</td><td>Onyx Boox e-reader tablet</td><td>E-reader</td><td>A narrow, high-consideration category where sellers order conservatively. Depth is likely thin, so this is a buy-now rather than a wait-and-see. If you see a decent price and the variant you want is in stock, take it.</td><td><a href="https://www.rakuten.com/search/onyx+boox">Rakuten</a></td></tr><tr><td>8</td><td>Godox LED light panel</td><td>Photo and video lighting</td><td>Creator gear was bought deep in spring on the expectation of a strong summer content cycle. Specialist retail channels carry the overhang and discount it methodically rather than in one dramatic drop.</td><td><a href="https://www.bhphotovideo.com/c/search?q=godox%20led%20panel">B&#x26;H Photo</a></td></tr><tr><td>9</td><td>Tribit portable Bluetooth speaker</td><td>Portable speaker</td><td>The one caution on this list. Outdoor audio has a tournament and summer tie-in, which means promotional cost is baked into current pricing. Depth is probably fine, so there is little stock-out risk — this one you can genuinely wait on.</td><td><a href="https://www.tiktok.com/shop">TikTok Shop</a></td></tr><tr><td>10</td><td>Fiskars pruning and garden set</td><td>Garden tools</td><td>Garden tools are bought on a spring cycle and cleared on a summer one. By mid-June the seasonal window has passed its peak and the pressure to move units before autumn storage fees is already building.</td><td><a href="https://www.target.com/s?searchTerm=fiskars+pruner">Target</a></td></tr></tbody></table>
+<p>Read that table as a set rather than a menu. Eight of the ten argue for acting sooner rather than later, one argues for patience, and one is on the list mostly because deferring it has become the more expensive option. That distribution is not a stylistic choice — it is what the inventory logic produces in the second week of June, when the seasonal categories are past peak and the fixed positions are starting to hurt.</p>
+<h2 id="best-direct-to-consumer-and-brand-picks">Best Direct-to-Consumer and Brand Picks</h2>
+<p>Different rules apply here. These brands control their own stock, so stock-out risk is lower and the discount calendar is not locked to any platform’s event. Each of these sits in a distinct category, and several of them are worth watching in the week <em>before</em> June 23 rather than during it.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>#</th><th>Brand</th><th>Category</th><th>Why it makes sense now</th><th>Where to buy</th></tr></thead><tbody><tr><td>1</td><td>Helinox</td><td>Camp furniture</td><td>Peak season for packable chairs and cots is now, which means the brand knows exactly how its season is tracking. Mid-season is when a direct brand adjusts, and they can do it without waiting for anyone’s calendar.</td><td><a href="https://www.helinox.com">helinox.com</a></td></tr><tr><td>2</td><td>Tom Bihn</td><td>Travel bags</td><td>Domestically manufactured in small runs, which inverts the usual logic — there is no container of overstock to clear, so discounts are rare and shallow. Buy when you need it, not when it is cheap, because cheap may not arrive.</td><td><a href="https://www.tombihn.com">tombihn.com</a></td></tr><tr><td>3</td><td>Ortlieb</td><td>Cycling luggage</td><td>Waterproof panniers and bikepacking bags peak with summer touring. European manufacturing means shorter replenishment cycles and less overstock pressure, so expect targeted promotions on specific colourways rather than range-wide cuts.</td><td><a href="https://www.ortlieb.com">ortlieb.com</a></td></tr><tr><td>4</td><td>Henson Shaving</td><td>Grooming</td><td>A precision-machined razor is a one-time purchase with a very long tail of cheap blades, which makes the entry price the only meaningful decision. Direct brands in this space run periodic starter-kit promotions worth waiting a week or two for.</td><td><a href="https://hensonshaving.com">hensonshaving.com</a></td></tr><tr><td>5</td><td>Topo Athletic</td><td>Running shoes</td><td>Footwear runs on a strict model-year cadence and outgoing colourways get cleared hard on the brand’s own site before the autumn line lands. Previous-generation stock at this point in the year is the best value in the category.</td><td><a href="https://www.topoathletic.com">topoathletic.com</a></td></tr><tr><td>6</td><td>Uplift Desk</td><td>Home office</td><td>Large, heavy, expensive to store, and sold in configurations rather than units. Configurable furniture generates awkward leftover combinations of frame and top, and those specific combinations get discounted while the popular ones do not.</td><td><a href="https://www.upliftdesk.com">upliftdesk.com</a></td></tr><tr><td>7</td><td>Brooklyn Bedding</td><td>Sleep</td><td>Mattresses are manufactured to order in this model, so there is no inventory overhang and promotions are purely a demand-management tool. That makes the promotional calendar predictable rather than opportunistic — a summer event is close to certain.</td><td><a href="https://brooklynbedding.com">brooklynbedding.com</a></td></tr><tr><td>8</td><td>1Zpresso</td><td>Coffee gear</td><td>Hand grinders are a durable, non-seasonal purchase with no reason to be discounted for the tournament or the summer. Prices are stable, which means there is nothing to wait for and no penalty for buying today.</td><td><a href="https://1zpresso.coffee">1zpresso.coffee</a></td></tr><tr><td>9</td><td>Blackwing</td><td>Stationery</td><td>The category is about to enter its strongest quarter as the school cycle begins, and prices rise into that rather than falling. Buying ahead of a demand ramp is the opposite of most advice this month and it is correct here.</td><td><a href="https://blackwing602.com">blackwing602.com</a></td></tr><tr><td>10</td><td>Kamado Joe</td><td>Outdoor cooking</td><td>Big-ticket outdoor cooking is bought in spring and cleared in late summer. Mid-June is early for the deepest cuts, but it is the point at which accessory bundles start appearing, and bundles on a high-ticket item can be worth more than a percentage off.</td><td><a href="https://kamadojoe.com">kamadojoe.com</a></td></tr></tbody></table>
+<p>Notice how different the reasoning is across these ten compared to the marketplace table. Almost none of them turn on clearance pressure, because these brands mostly do not have a clearance problem. They turn on manufacturing model, seasonal cadence, and whether the category is heading into demand or out of it. That is the more useful lens for direct sites, and applying marketplace logic to them is a common and expensive category error.</p>
+<h2 id="a-worked-example-reading-two-listings-side-by-side">A Worked Example: Reading Two Listings Side by Side</h2>
+<p>Abstract principles are easy to nod along to and hard to apply at eleven at night with a cart open. So here is the process run concretely, on two hypothetical listings that look equally attractive at a glance.</p>
+<p><strong>Listing A</strong> is a mid-range portable speaker. It shows a fifteen percent discount already applied. It is available in four colours, all in stock. Handling is same-day. There are nine sellers offering the same catalogue item, with the cheapest three within a couple of percent of each other. There is no purchase limit. The product has been on the market for about fourteen months.</p>
+<p><strong>Listing B</strong> is a compact desktop computer. It shows no discount at all. Two of five configurations are unavailable. Handling has extended to four business days. There is one seller. There is a two-per-customer limit. The product launched about four months ago.</p>
+<p>The instinct is to prefer A, because A is already discounted and B is not. That instinct is backwards on both counts.</p>
+<p>Listing A is showing every marker of a deep, over-committed position. Full colour coverage means somebody bought the whole range. Nine sellers on one listing means the channel is stuffed and at least six of those parties are going to be undercut and will respond. Fourteen months on market means a successor is plausibly close, which puts a hard deadline on clearing this generation. No purchase limit means nobody is worried about running out. Every one of those signals says the same thing: <strong>this price is not the floor, and the floor is further away than fifteen percent.</strong> If you want this speaker, waiting through the event is low-risk and likely to be rewarded. The only real cost of waiting is that you do not have a speaker for eleven days.</p>
+<p>Listing B is showing every marker of a thin, tight position. Missing configurations mean the position is already partly consumed. Extended handling means it is being served from somewhere less deep. A single seller means no undercutting pressure exists at all. A purchase limit means the seller is actively rationing. Four months on market means no successor pressure and no reason to clear. Every one of those signals says: <strong>whatever discount appears here will be small, and the unit may simply be gone.</strong> If you want this computer, the correct move is to buy it near current price and stop thinking about it, because the downside of waiting is not paying five percent more — it is a multi-week wait for the next inbound cycle.</p>
+<p>The general shape of the rule: <strong>discounts already showing on a deep position predict deeper discounts. Absence of discount on a thin position predicts absence of discount.</strong> Discounting has momentum in one direction and inertia in the other, and the depth signals tell you which regime you are in before the price does.</p>
+<p>One refinement worth adding. Age on market is a genuine multiplier on this analysis, and it is easy to check. A product in its second year is competing against its own replacement in a way a four-month-old product is not. When depth signals and product age point the same way — deep stock plus an ageing product — that is the strongest wait signal available to a consumer. When they conflict, depth wins in the short run and age wins over a quarter.</p>
+<h2 id="platform-by-platform-where-each-one-actually-stands">Platform by Platform: Where Each One Actually Stands</h2>
+<p>The inventory picture is not uniform. Different platforms impose different constraints on their sellers, and those constraints produce different discount behaviour. Here is the read on the major ones as of today.</p>
+<p><strong>Amazon.</strong> The most rigid inbound system and therefore the most locked. Receiving deadlines for event eligibility have passed, storage fee escalation is a real and rising cost for anyone holding too much, and the fee structure actively punishes slow-moving inventory. The result is the sharpest split between deep-position sellers who will cut hard and thin-position sellers who will not move at all. It is also the platform where the depth-reading technique described above works best, because the signals are the most standardised and the most visible.</p>
+<p><strong>Walmart.</strong> Increasingly marketplace-driven but still with a large first-party inventory position, and first-party buyers make large single commitments that create the exact overhang that produces good clearance. Seasonal categories are where this shows up most clearly. Worth checking against the equivalent Amazon listing rather than assuming, because the two platforms’ positions in the same product are often genuinely different.</p>
+<p><strong>eBay.</strong> The least constrained by any event calendar, because a large share of sellers hold their own stock and set their own timing. That makes it less exciting during a big event and quietly better in the weeks around one. Multi-seller competition on standardised items is the main mechanism here, and it works steadily rather than in bursts.</p>
+<p><strong>AliExpress and Temu.</strong> Cross-border direct with the shortest planning horizon and the most elastic supply, which means these platforms are the least subject to the fixed-position logic. Sellers can and do adjust continuously. The trade-off is delivery time and the fact that a low headline price sometimes reflects a genuinely different product specification rather than a better deal. Read the specification, not the price.</p>
+<p><strong>TikTok Shop.</strong> Discount depth here is entangled with creator commission economics rather than pure inventory. A product being pushed hard is a product with a high commission attached, which is a cost, which comes out of the same margin that could have funded a lower price. Loud is not the same as cheap.</p>
+<p><strong>Costco and warehouse clubs.</strong> Very large single buys, very limited assortment, and a hard rotation discipline — when something is due to leave the floor it leaves, and it gets cleared to make that happen. The signals are cruder but the markdowns, when they come, are among the deepest available anywhere.</p>
+<p><strong>Newegg and B&#x26;H.</strong> Specialist channels with buyers who know their categories, which means less wild over-ordering and less dramatic clearance. Compensating advantage: better specification accuracy, better return handling on technical products, and open-box pricing that is often a better value than any percentage discount on a sealed unit.</p>
+<p><strong>Shopify-hosted independent stores.</strong> The whole direct-to-consumer analysis applies. No platform-imposed calendar, self-controlled inventory, promotions timed for cheap acquisition rather than event participation. Check whether a brand you want ran a promotion in the week before the big marketplace event last year — many of them do it deliberately, and that pattern repeats more reliably than most.</p>
+<h2 id="building-a-price-baseline-before-the-noise-starts">Building a Price Baseline Before the Noise Starts</h2>
+<p>There is one piece of preparation that pays for itself more reliably than any amount of deal-hunting, and the window to do it closes when the promotional period opens. Build a price baseline now, while prices are boring.</p>
+<p>The reason is straightforward. A discount is presented as a distance from a reference price, and the reference price is chosen by the party who benefits from it looking large. During a promotional period you have no independent way to judge whether that reference is honest, because every comparison point available to you is also inside the promotional period. Eleven days out, prices are unremarkable and therefore trustworthy. Whatever you record today is the real number.</p>
+<p>The method takes a few minutes per item. Write down, for each thing you are seriously considering, three figures: the current price on the platform you would most likely buy from, the current price on one alternative platform, and the current price on the brand’s own site if one exists. That third figure is the one people skip and it is frequently the most informative, because a brand’s direct price is the closest thing to an honest anchor that exists — the brand has no incentive to inflate the price it charges itself against.</p>
+<p>What you do with those numbers matters as much as collecting them. <strong>Convert the discount you eventually see into an absolute price and compare it to your baseline, never to the seller’s stated reference.</strong> A forty percent discount against an anchor that appeared last week is worth less than a fifteen percent discount against a price that has been stable for three months. This is the single most common way shoppers are separated from money during promotional periods, and the defence is a note written before the noise began.</p>
+<p>A few refinements worth the effort on higher-ticket items.</p>
+<p><strong>Record the exact model number, not the product name.</strong> Manufacturers routinely produce channel-specific variants with slightly different specifications and different model numbers, and comparing across them is comparing different products. The number is on the listing, usually near the bottom.</p>
+<p><strong>Note whether the price includes delivery and, where relevant, expected import charges.</strong> A cross-border listing that looks meaningfully cheaper often is not once landed cost is included, and that gap is easiest to evaluate calmly rather than in a checkout flow.</p>
+<p><strong>Check the price history if the category supports it.</strong> For anything that has been on the market more than a few months, the question worth answering is not what it costs today but what its usual floor has been. Products have characteristic floors, and knowing one means recognising instantly whether an offer is genuinely unusual or just a return to a level the item reaches routinely.</p>
+<p><strong>Write down what you would actually pay.</strong> Independent of any discount, independent of any anchor. This number is the only one in the exercise that comes from you rather than from a seller, and it is the one that makes the decision easy when everything else gets loud. If the price lands under it, buy. If it does not, the fact that it is discounted is irrelevant.</p>
+<p>Do this for five or six items today and the entire promotional period becomes a simple matching exercise rather than a series of judgement calls made under time pressure with incomplete information.</p>
+<h2 id="how-to-buy-this-week-without-overthinking-it">How to Buy This Week Without Overthinking It</h2>
+<p>Compressed into something usable.</p>
+<p><strong>Sort your list into two piles first.</strong> Marketplace items and direct-brand items. They follow different rules and mixing them is where most of the bad decisions happen.</p>
+<p><strong>On the marketplace pile, check depth before you check price.</strong> Variants, seller count, purchase limits, handling time. Two or more thin signals means buy now at whatever reasonable price exists. Two or more deep signals means you can wait through the event with confidence.</p>
+<p><strong>On the direct pile, check the category’s direction instead.</strong> Is it heading into peak demand or out of it? Out of peak means wait. Into peak means buy now, because prices rise into demand on brand sites rather than falling.</p>
+<p><strong>Set a real number before you look at any discount.</strong> Decide what the item is worth to you independent of what it is marked down from. A percentage off an inflated anchor is not information. A price you would have paid anyway is.</p>
+<p><strong>Do not buy anything solely because it is discounted.</strong> This sounds obvious and is violated constantly during promotional weeks. The single most reliable way to lose money in the next eleven days is to buy three things you had not thought about because they were cheap, rather than one thing you had.</p>
+<p><strong>Check the return window against the delivery date.</strong> If something ships slowly, the clock on returning it may start from delivery or may start from purchase depending on the seller. On a high-ticket item this is worth thirty seconds of reading.</p>
+<p><strong>Buy the thin things first.</strong> If your list has one item with obvious stock-out risk and four without, resolve that one today. The others will still be there.</p>
+<h2 id="category-notes">Category Notes</h2>
+<p><strong>Computing and storage.</strong> The strongest case for acting rather than deferring, for the component-cost reasons discussed above. Mini PCs specifically are in a good position — broad spring builds, no seasonal demand support, and a category that gets ignored during sports-driven promotional cycles.</p>
+<p><strong>Personal audio.</strong> Split. Outgoing-generation gear is being cleared and represents real value. Current-generation gear in the outdoor and portable segment carries summer promotional cost and is worse value than it appears. Identify which generation you are looking at before deciding.</p>
+<p><strong>Pet.</strong> Summer hydration and cooling products are past their peak sell-through window. Sellers who built deep for the season are now working against a closing window. Among the better clearance opportunities on the marketplace side this month.</p>
+<p><strong>Outdoor and camping.</strong> Peak season, which means direct brands have live information about their season and can adjust mid-stream. Marketplace stock in this category tends to be thinner because the seasonal risk is high and sellers order conservatively. Favour direct sites here.</p>
+<p><strong>Home air quality.</strong> Bursty demand driven by conditions rather than calendar, which makes inventory positioning unusually difficult and over-ordering common. Warehouse-club channels are the place to look.</p>
+<p><strong>Garden and outdoor tools.</strong> Bought on a spring cycle, cleared on a summer one, currently transitioning from the first to the second. Discounts should deepen through the rest of the month.</p>
+<p><strong>Grooming and personal care.</strong> Durable-goods purchases in this category are almost entirely insensitive to the promotional calendar. Buy on need. The consumable side runs its own subscription-driven promotional pattern that has nothing to do with June.</p>
+<p><strong>Stationery and school supplies.</strong> Heading into the strongest demand quarter of the year. Prices firm rather than soften from here. This is the clearest buy-ahead category on the list.</p>
+<p><strong>Outdoor cooking.</strong> Early for the deep cuts, which typically arrive in August. Mid-June is when accessory bundling starts, and on high-ticket items a bundle is frequently worth more in absolute terms than the percentage discount that comes later.</p>
+<p><strong>Cycling.</strong> Peak season with genuine European manufacturing depth in the accessory segment. Expect targeted rather than broad promotions, focused on specific colours and sizes that did not sell.</p>
+<h2 id="five-mistakes-that-will-cost-you-money-in-the-next-eleven-days">Five Mistakes That Will Cost You Money in the Next Eleven Days</h2>
+<p><strong>Assuming a bigger event means a better price on your specific item.</strong> The event is an aggregate. Your item is a single inventory position. Those two things are only loosely related, and for a thin position they are not related at all. The size of the sale tells you nothing about the depth of the discount on one product.</p>
+<p><strong>Treating a discount percentage as a measure of value.</strong> A percentage is a relationship between two numbers, one of which the seller chose. The only number that matters is the one leaving your account. Compare final prices across platforms, not discount depths, and do the comparison before the event so you have a baseline that was not set during a promotional period.</p>
+<p><strong>Waiting on something that will not be restocked.</strong> This is the expensive one and it is the direct consequence of the inbound cutoff. On a marketplace, if the depth signals are thin, waiting is not a bet on price — it is a bet on availability, and losing that bet costs you the entire purchase rather than a few percent. People routinely accept enormous availability risk to chase a small price improvement without noticing that is what they are doing.</p>
+<p><strong>Applying marketplace logic to direct brand sites.</strong> A brand that manufactures to order has no clearance problem and will not behave like a seller sitting on a container. Waiting for a dramatic markdown that the business model does not produce means waiting indefinitely. Conversely, applying direct-brand patience to a thin marketplace listing loses you the unit.</p>
+<p><strong>Buying the loud thing.</strong> Heavy promotion in a month when promotional inventory is scarce and expensive signals cost, not competition. The categories being shouted about are carrying that cost in their price. The categories nobody is mentioning have been abandoned by the promotional budget and are drifting down quietly. Loud and cheap are close to opposites right now.</p>
+<h2 id="policy-shipping-and-returns">Policy, Shipping and Returns</h2>
+<p>A few operational points that are worth knowing before you commit to anything this month.</p>
+<p><strong>Delivery estimates will degrade and then recover.</strong> Fulfilment networks run near capacity during a large event, and the effect shows up as slipped delivery promises for about a week afterwards rather than as visible failures during it. If you need something by a specific date in late June, order before the event rather than during it, and treat any estimate quoted during the event window as optimistic by a day or two.</p>
+<p><strong>Return windows during promotional periods are frequently extended, and frequently not.</strong> Some sellers extend, some do not, and the difference is buried in the listing rather than announced. On anything expensive, read the actual policy on the actual listing before purchase. Extended windows are also sometimes conditional on the item being unopened, which defeats the purpose for anything you need to try.</p>
+<p><strong>Cross-border into the EU is getting more predictable.</strong> The continued pre-positioning of inventory inside the bloc by large logistics operators means more cross-border orders now ship from within Europe rather than from origin. Delivery windows are shorter and customs handling is cleaner. Check whether a listing indicates local dispatch — where it does, the experience is now close to a domestic order.</p>
+<p><strong>Component-heavy categories carry more forward cost risk than usual.</strong> Nothing to act on urgently, but the standard assumption that electronics get cheaper if you wait is weaker than normal for anything with significant semiconductor content. If you were deferring to Q4 on that assumption specifically, reconsider.</p>
+<p><strong>Marketplace listing stability during peak periods is worth a thought.</strong> Enforcement activity against counterfeit and infringing listings tends to intensify ahead of high-volume retail periods, and a listing that disappears mid-order creates a refund rather than a delivery. Buying from a brand’s official storefront or an authorised seller rather than the cheapest unknown offer is worth a small premium during a peak window specifically, even if it would not be at other times of the year.</p>
+<h2 id="whats-coming-next">What’s Coming Next</h2>
+<p>The rest of June has a shape that is already visible, and planning against it is easier than reacting to it.</p>
+<p><strong>The next week and a half.</strong> Nothing significant changes on the marketplace side, because nothing can — positions are fixed and sellers are waiting. The action is on direct brand sites, several of which will run promotions in the pre-event window precisely because acquisition costs are lower before everyone else starts bidding. This is the best stretch of the month for direct-site shopping and most people will miss it because they are waiting for something else.</p>
+<p><strong>The event window in late June.</strong> Deep positions resolve, thin positions do not. Expect a wide dispersion in discount quality that will be described as inconsistent but is actually perfectly consistent with the inventory logic. First day tends to be the deepest on genuinely over-stocked items, because sellers who need to clear want the volume early rather than late.</p>
+<p><strong>Late June, around the end of the group stage.</strong> There is a demand trough embedded in the tournament calendar. The gap between the end of the group stage and the start of the knockout rounds is the only real pause in five weeks of continuous fixtures, and attention briefly becomes available again. Sellers who spent heavily to be visible during the group stage will have less budget for that window. Watch for softness in the tie-in categories right around that boundary — it is the first point since the tournament opened at which those categories are not carrying a full attention premium.</p>
+<p><strong>Early July.</strong> Post-event cleanup. Whatever did not clear during the event is now in a worse position than before, because the seller spent their best demand window and still has units. Early July markdowns on event leftovers are consistently underrated and consistently better than the event itself for anything that failed to move.</p>
+<p><strong>Late July and August.</strong> The seasonal handover. Summer categories transition to genuine clearance while autumn categories begin arriving at full price. Outdoor cooking, garden, summer apparel and cooling products all reach their real floor in this window. Simultaneously the school-driven categories firm up, which is why buying stationery ahead of the ramp makes sense today.</p>
+<p><strong>Into the autumn.</strong> Two things to watch. The first is whether component cost pressure in semiconductor-adjacent categories translates into higher landed costs on the units arriving for the Q4 season — which would show up as thinner discounting in November rather than as higher shelf prices, because sellers protect headline prices and cut promotional depth instead. The second is the continuing shift of cross-border fulfilment into destination-market warehouses, which should keep improving delivery reliability for European buyers and gradually erase the delivery-time penalty that has historically been the main reason to avoid cross-border sellers.</p>
+<h2 id="bottom-line">Bottom line</h2>
+<p>The sale in eleven days is a disclosure event, not a decision event. Every unit that will be discounted is already in a warehouse, bought at a cost that was fixed in spring, in a quantity that cannot now be changed. That makes discount depth a function of one thing: whether whoever owns the stock has too much of it. You can read that from the outside today — variant coverage, seller counts, purchase limits, handling times, product age — and the read is available before anyone has told you anything.</p>
+<p>Split your list in two. On marketplaces, the risk is that the unit disappears, so buy the thin things now and be patient only with the demonstrably deep ones. On direct brand sites, the risk is only price, so let category direction decide: out of peak means wait, into peak means buy. And ignore the volume of the marketing entirely, because in a month when promotional attention is the scarcest thing in retail, the loudest categories are the ones paying the most for it — and paying for it out of the same money that would otherwise have funded your discount.</p> </div> <div class="text-center mt-8"> <a href="/blog" class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition">← Back to Blog</a> </div>  </div>  <footer class="my-20"> <p class="text-center text-sm text-slate-500">
+Copyright © 2026 orcalva. All rights reserved.
+</p> <!--
+    Can we ask you a favor 🙏
+    Please keep this backlink on your website if possible.
+    or Purchase a commercial license from https://orcalva.com
+  --> <p class="text-center text-xs text-slate-500 mt-1">
+Made by <a href="https://orcalva.com" target="_blank" rel="noopener" class="hover:underline">
+orcalva
+</a> </p> </footer>  </body> </html>
